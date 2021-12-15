@@ -1,0 +1,3 @@
+<h1><%= @book.title %> - <%= @book.parution_date %> - <%= @book.author.last_name %> - <%= @book.category.name %> - <%= @book.library.name %></h1>
+<%= link_to 'Books', books_path, class: 'btn btn-info' %>
+<%= link_to 'Update', edit_book_path(@book.id), class: 'btn btn-success' %>

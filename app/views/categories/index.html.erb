@@ -1,0 +1,8 @@
+<h1>Categories</h1>
+
+<%= link_to 'Add category', new_category_path, class: 'btn  btn-info' %>
+<% @categories.find_each do |category| %>
+  <%= link_to category do %>
+  <h2><%= category.name %></h2>
+  <% end %>
+<% end %>

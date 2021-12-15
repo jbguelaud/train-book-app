@@ -1,0 +1,8 @@
+<%= simple_form_for @book do |f| %>
+  <%= f.input :title %>
+  <%= f.input :parution_date, as: :date, html5: true %>
+  <%= f.input :library_id, :collection => @libraries, :label_method => :name, :value_method => :id, :label => "Library" ,:include_blank => false %>
+  <%= f.input :category_id, :collection => @categories, :label_method => :name, :value_method => :id, :label => "Category" ,:include_blank => false %>
+  <%= f.input :author_id, :collection => @authors, :label_method => :first_name, :value_method => :id, :label => "Author" ,:include_blank => false %>
+  <%= f.submit %>
+<% end %>

@@ -1,0 +1,8 @@
+<h1>Books</h1>
+
+<%= link_to 'Add book', new_book_path, class: 'btn  btn-info' %>
+<% @books.find_each do |book| %>
+  <%= link_to book do %>
+  <h2><%= book.title %></h2>
+  <% end %>
+<% end %>

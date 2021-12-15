@@ -1,0 +1,8 @@
+<h1>Authors</h1>
+
+<%= link_to "Add Authors", new_author_path, class: "btn btn-info"%>
+<% @authors.find_each do |author| %>
+  <%= link_to author do %>
+  <h2><%= author.first_name %> - <%= author.last_name %></h2>
+  <% end %>
+<% end %>
